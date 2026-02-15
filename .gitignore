@@ -1,0 +1,37 @@
+# Environment variables
+.env
+.env*.local
+.env.production
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Dependencies (covered by subdirectories)
+node_modules/
+
+# Build outputs (covered by subdirectories)
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Claude artifacts
+.claude/

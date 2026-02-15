@@ -1,0 +1,314 @@
+Pi-Hack-Za Hackathon
+24-Hour Build 
+Challenge
+Choose one track. Build an AI-first prototype. Demo it live.
+This is not about theory—it's about shipping working intelligence in 24 
+hours.
+Why This Hackathon Exists
+The Problem
+Traditional workflows are manual, inconsistent, slow, 
+and nearly impossible to scale. Organizations are 
+drowning in repetitive tasks that eat time and 
+introduce errors.
+Your Mission
+Build domain-aware AI systems that act, evaluate, and generate measurable 
+outcomes. We're looking for intelligence that makes decisions, not just chatbots that 
+respond.
+Real demos beat slides every time
+Working systems trump polished mockups
+Measurable outcomes prove your approach
+How to Win
+Build End-to-End
+Create a functioning demo with a 
+complete flow—not fragments or 
+disconnected pieces. Show the full 
+system working together.
+Prove Reliability
+Show Real Intelligence
+Demonstrate measurable reasoning, 
+not scripted responses. Your AI 
+should adapt, evaluate, and make 
+decisions based on context.
+Handle failures gracefully. Show error recovery, fallback logic, and clear outputs 
+even when things go wrong.
+Meet at least 95% of the submission checklist to qualify for prizes. Missing critical 
+requirements disqualifies your entry—no exceptions.
+Five Tracks to Choose From
+Pick one track and go deep. Each presents a distinct real-world problem that demands intelligent automation and context-aware decision-making.
+Rules and Constraints
+24-Hour Time Limit
+Clock starts at kickoff and ends at final 
+submission. No extensions, no 
+exceptions. Plan your build accordingly.
+One Track Per Team
+Pick a single track and commit. Optional 
+integrations are fine, but you must 
+deliver a complete solution for your 
+chosen problem.
+Simulated Data Only
+No real phone numbers, customer data, 
+or production systems required. Use test 
+sandboxes, mock APIs, or simulated 
+environments.
+Working AI Loop Required
+Show at least one complete cycle: input 
+→
+ reasoning 
+→
+ action 
+→
+ output. Static 
+mockups or hard-coded flows don't 
+count.
+Responsible AI Section
+Include notes on privacy, bias mitigation, 
+hallucination controls, and auditability. 
+This isn't optional—it's required.
+Track 1: AI-Powered Interview System
+TRACK 1
+The Problem
+Manual interviews are inconsistent, biased, and slow. Scoring is unstructured, making it nearly impossible to compare candidates fairly or track 
+interviewer drift over time.
+What We DON'T Want
+A static list of pre-written questions
+A chatbot with no scoring logic
+A generic LLM transcript dump with no structure
+What We Expect
+Structured flow: Intro 
+→
+ role calibration 
+→
+ technical 
+→
+ 
+communication 
+→
+ wrap-up
+Dynamic questions: Adapt to candidate responses and adjust 
+difficulty in real-time
+Intelligent evaluation: Rubric-based scoring with evidence 
+snippets cited from responses
+Automated scorecard: Strengths, risks, hire recommendation, 
+and suggested follow-up questions
+Fairness checks: Same rubric applied consistently, with bias 
+detection and drift monitoring
+Minimum Demo Requirements
+Show role selection, candidate answering by text or voice, system asking intelligent follow-ups, and generating a scorecard (PDF or web view).
+Stretch Goals
+Anti-cheating signals, confidence tracking per answer, multi-interviewer calibration, question bank governance, and bias/drift monitoring 
+dashboards.
+Track 2: AI Inbound/Outbound Agent – US Real 
+Estate
+TRACK 2
+The Problem
+Leads are lost due to slow response times, inconsistent qualification, and manual CRM updates. Agents spend hours on repetitive follow-ups 
+instead of closing deals.
+What We DON'T Want
+A scripted FAQ bot with no decision-making
+Just sentiment charts—no actions or CRM updates
+No appointment booking, no prioritization, no lead scoring
+What We Expect
+Inbound handling: Buyer/seller inquiries, property questions, 
+financing context, and next steps
+Outbound follow-ups: Nurture sequences, objection handling, re
+engagement campaigns
+Lead qualification: Intent, urgency, budget range, location, 
+timeline, motivation, readiness score
+Appointment booking: Propose slots, confirm, handle 
+reschedules autonomously
+CRM updates: Structured fields, notes, and next-best-action 
+recommendations
+Call insights: Summary, objections, competitor mentions, risk 
+flags, and action items
+Minimum Demo Requirements
+Simulate a call or web voice chat, plus show a lightweight CRM page displaying lead status changes and next actions. Use test audio, browser mic, 
+or recorded calls—Twilio optional.
+Stretch Goals
+Multi-channel (SMS, email, voice), agent handoff logic, compliance script checks, and personalization memory per lead.
+Track 3: Advanced Document Intelligence Platform
+TRACK 3
+The Problem
+Traditional OCR and rule-based parsers miss layout meaning, cross-section context, and semantic differences across document versions. Teams 
+waste hours manually extracting and comparing contract clauses, invoices, and compliance docs.
+Layout-Aware Understanding
+Detect sections, tables, headers, 
+signatures, references, and relationships
+—not just raw text.
+Contextual Extraction
+Extract fields with citations to specific 
+pages and regions, grounding every claim 
+in evidence.
+Conversational Interaction
+Ask questions, get answers grounded in 
+document references—no hallucinated 
+responses.
+Semantic Comparison
+Highlight changes across versions, flag risk differences, and track 
+clause drift over time.
+Document Mapping
+Turn messy, unstructured documents into clean, queryable 
+schemas for downstream workflows.
+Minimum Demo Requirements
+Upload 2 complex PDFs complex image with poor quality image and data with some handwriting also in it (contracts, invoices, technical specs). 
+Show layout structure, extract key items with citations, run a comparison view, and enable chat grounded in evidence.
+Stretch Goals
+Multi-document reasoning, confidence scoring per extraction, human review UI, validation rules, and auto red-flag detection for compliance risks.
+Track 4: AI-Driven Intelligent Ticketing – Enterprise 
+ITSM
+TRACK 4
+The Problem
+Modern enterprises handle massive volumes of incidents, service requests, and change tickets across platforms like ServiceNow, Jira, Zendesk, 
+and Freshservice. Pain points persist: inaccurate classification, incorrect routing, delayed prioritization, repetitive manual triage, poor root-cause 
+visibility, and reactive operations.
+Ticket Understanding
+Summarize, classify, extract entities, detect duplicates, and flag 
+missing information automatically.
+Autonomous Prioritization
+Predict SLA risk, score impact, and trigger escalations based on 
+historical patterns and urgency signals.
+Smart Routing
+Suggest resolver group with explanation and confidence score—no 
+more random assignment or manual triage.
+Pattern Detection
+Identify recurring incidents, noisy alerts, and top drivers across 
+historical ticket data to surface systemic issues.
+Proactive Insights
+Forecast trends, recommend actions, and suggest knowledge articles 
+to prevent future tickets.
+Feedback Loop
+Allow humans to correct AI decisions—system learns from 
+corrections and improves over time.
+Minimum Demo Requirements
+Ingest a dataset of sample tickets, auto-classify and route them, detect duplicates, show an insights view (trends, top issues), and output an audit 
+trail per decision.
+Stretch Goals
+Time-to-resolution prediction, root-cause clustering, auto-draft responses, and a platform adapter layer that could connect to any ITSM API.
+Track 5: AI Project Management + Vision-Based QA
+TRACK 5
+The Problem
+PM and QA are reactive—defects are found late, testing is repetitive, and visibility into project health is limited. Teams waste cycles on manual 
+regression checks and guessing which tasks are at risk.
+What We DON'T Want
+A basic Kanban board with no intelligence
+A test case tracker with zero automation
+Manual QA digitized without AI validation
+What We Expect
+AI-assisted planning: Risk prediction and project health signals 
+based on task data and velocity
+Vision-based UI QA: Validate flows, detect visual regressions, 
+missing elements, and layout shifts
+Intelligent test generation: Convert user stories into test steps, 
+including edge cases
+End-to-end quality insights: Defect trends, hotspots, and release 
+readiness scores
+Minimum Demo Requirements
+Upload or capture UI screenshots for 2 builds (e.g., v1 and v2). Run visual checks to detect regressions, generate test cases, and show a quality 
+report tied to project tasks.
+Stretch Goals
+Automated bug filing, flaky test detection, cross-browser simulation, self-healing selectors, and release gates that block deploys based on quality 
+thresholds.
+Judging Rubric: 100 Points
+Scoring is transparent and weighted toward technical depth and product impact. Ties are broken by measurable outcomes and system robustness 
+under failure conditions.
+AI Depth & Reasoning
+Product Usefulness & UX
+Domain Fit & Context
+Automation & Agentic...
+Reliability & Error...
+Evaluation & Metrics
+Security & Privacy
+Demo Quality
+0 10 20 30
+AI depth is worth 25 points—the single largest category. Show that your system reasons, adapts, and learns rather than following rigid scripts.
+What "Real Demo" Actually Means
+Show Live Input and Output
+Run the system in real-time. Judges will 
+provide test inputs or ask you to 
+demonstrate specific scenarios on the 
+spot.
+Show at Least One Failure Case
+Demonstrate your fallback behavior. How 
+does the system handle bad input, edge 
+cases, or missing data? Grace under failure 
+matters.
+Show Structured Artifacts
+Output tangible results—scorecards, CRM 
+updates, comparison reports, routing 
+decisions, QA reports. Judges need to see 
+measurable outcomes, not just logs.
+Avoid pre-recorded-only demos. Live walkthroughs are strongly preferred. If you must show a video, be ready to answer technical questions 
+and run additional test cases on demand.
+Submission Checklist: 95% Required
+Meet at least 95% of these requirements to be prize-eligible. Missing critical items disqualifies your submission—no exceptions, no appeals.
+1 Working Prototype
+A functioning demo with a clear user flow—not disconnected scripts or concept mockups.
+2 Repo Link with README
+Include setup steps and an architecture diagram showing how components connect.
+3 Demo Video (3–5 minutes)
+Plus readiness to present live. Video is backup—judges prefer live interaction.
+4 Sample Inputs and Outputs
+At least 5 test cases showing normal scenarios, edge cases, and failure handling.
+5 Evaluation Method
+Document what metrics you used (accuracy, latency, coverage) and why you chose them.
+6 Responsible AI Notes
+Privacy, bias mitigation, hallucination controls, and data handling. Non-negotiable.
+7 Logging and Observability
+At least basic traces of decisions—what the system thought and why it acted.
+8 Clear Limitations Section
+What is NOT solved yet? Where does the system still need human oversight? Honesty matters.
+Suggested Architecture Patterns
+Keep it simple. Prioritize a working AI loop over perfect infrastructure. Here are three proven patterns to help you ship fast and ship smart.
+Pattern C
+Document pipeline: vision, 
+structuring, extraction, 
+grounding, review.
+Pattern B
+Agent loop: planner, 
+executor, tools, memory, 
+evaluator.
+Pattern A
+Web app + API + LLM 
+orchestration for fast 
+delivery.
+Pattern A: Web App + API + LLM 
+Orchestration
+Simple frontend, backend API handling 
+business logic, LLM calls orchestrated server
+side. Best for interview systems, ticketing, or 
+PM dashboards.
+Pattern B: Agent Loop
+Tools, planner, executor, memory, and 
+evaluator. Best for real estate agents, 
+outbound calling, or any system that needs 
+multi-step reasoning and tool use.
+Pattern C: Document Pipeline
+Vision model 
+→
+ structure detection 
+→
+ 
+extraction 
+→
+ grounding 
+→
+ human review. 
+Best for document intelligence with Vision 
+Transformers.
+Don't overthink it. Choose the pattern closest to your track, adapt as needed, and focus on delivering a complete loop that shows intelligence in 
+action.
+Ship Fast. Ship Smart.
+Pick One Track
+Commit to solving one problem deeply—don't spread thin across 
+multiple tracks.
+Build the End-to-End Demo
+Show the full AI loop: input →
+ reasoning →
+ action →
+ output. Make it 
+real.
+Optimize for Intelligence and Reliability
+Measurable outcomes and graceful failure handling separate great 
+systems from good ones.
+You have 24 hours to build something remarkable. Focus on working intelligence, not 
+polished presentations. Show us systems that think, act, and improve. Good luck—
+now go build.

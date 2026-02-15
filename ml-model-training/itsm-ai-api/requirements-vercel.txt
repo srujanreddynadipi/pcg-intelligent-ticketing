@@ -1,0 +1,14 @@
+# Lightweight version for Vercel (may still exceed limits)
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.5.0
+scikit-learn>=1.3.0
+numpy>=1.24.0
+scipy>=1.11.0
+# Removed heavy packages:
+# - sentence-transformers (200MB+)
+# - torch (800MB+)
+# - transformers (200MB+)
+
+# NOTE: This removes duplicate detection and KB search features
+# For full features, use Render deployment instead

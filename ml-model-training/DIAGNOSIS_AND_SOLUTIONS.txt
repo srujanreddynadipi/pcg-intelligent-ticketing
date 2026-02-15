@@ -1,0 +1,122 @@
+"""
+DIAGNOSIS: Model Performance Issues
+====================================
+
+PROBLEM 1: Category Always Predicting "Software"
+-------------------------------------------------
+Root Cause: SEVERE CLASS IMBALANCE
+
+Current Distribution:
+  Software: 52,200 (52.2%) ← MAJORITY CLASS (too dominant!)
+  Access:   18,400 (18.4%)
+  Hardware: 15,600 (15.6%)
+  Network:  13,800 (13.8%)
+
+Why This Happens:
+- Model learns that predicting "Software" is correct 52% of the time
+- Gets rewarded more often for predicting Software
+- Becomes biased toward the majority class
+- Even with 93.78% accuracy, it's overpredicting Software
+
+Example Misclassifications:
+✗ "VPN Connection Failed" → Software (should be Network/Access)
+✗ "Laptop Screen Flickering" → Software (should be Hardware)
+✗ "Cannot Access Shared Drive" → Software (should be Access)
+
+
+PROBLEM 2: Resolver Routing Only 52% Accurate
+----------------------------------------------
+Root Cause: INSUFFICIENT DISCRIMINATIVE FEATURES
+
+Current Resolver Distribution:
+  App Support:  38,550 (38.55%)
+  Service Desk: 38,450 (38.45%)
+  Network Team: 23,000 (23%)
+
+Category → Resolver Mapping (from data):
+  Software  → App Support (36%), Service Desk (36%), Network Team (28%)
+  Access    → App Support (41%), Service Desk (40%), Network Team (19%)
+  Hardware  → App Support (42%), Service Desk (41%), Network Team (17%)
+  Network   → App Support (41%), Service Desk (41%), Network Team (19%)
+
+Why This Happens:
+- Each category maps to ALL resolver groups similarly
+- No strong discriminative patterns
+- Text features alone can't distinguish resolver assignment
+- Need domain-specific rules or more features
+
+
+SOLUTIONS
+=========
+
+SOLUTION 1: Balance Category Distribution
+------------------------------------------
+Approach A: Undersample Majority Class (Quick Fix)
+- Reduce Software tickets to match other categories (~15,000 each)
+- Results in ~60,000 balanced tickets
+- Faster training, may lose some patterns
+
+Approach B: Oversample Minority Classes (Better)
+- Duplicate/augment Access, Hardware, Network tickets
+- Results in ~200,000 tickets (all classes ~50,000 each)
+- More training data, better patterns
+- Recommended for production
+
+Approach C: Class Weights (Easiest)
+- Keep all data, but weight classes inversely to frequency
+- Software gets weight 0.5, others get higher weights
+- No data loss, quick to implement
+- Recommended for immediate fix
+
+
+SOLUTION 2: Improve Resolver Routing
+-------------------------------------
+Approach A: Add Business Logic Rules
+- Network keywords → Network Team
+- Hardware keywords → Service Desk
+- Database keywords → DBA Team (if added)
+- Critical priority → Senior teams
+
+Approach B: Add More Features
+- Time of day (business hours vs after hours)
+- SLA breach risk
+- Current team workload
+- Historical similar ticket assignments
+- Business service type
+
+Approach C: Hybrid Ensemble Model
+- Rule-based classifier (80% weight for Network keywords)
+- ML classifier (for everything else)
+- Confidence-based fallback to Service Desk
+
+Approach D: More Resolver Groups
+- Currently only 3 groups (too few!)
+- Add: DBA Team, Security Ops, Cloud Ops, DevOps Team
+- Better granularity → better routing
+
+
+RECOMMENDED IMPLEMENTATION PLAN
+================================
+
+PHASE 1: Quick Fix (30 minutes)
+1. Add class weights to category classifier
+2. Add keyword-based rules for resolver routing
+3. Retrain models
+Expected: Category 95%+, Resolver 65%+
+
+PHASE 2: Data Rebalancing (1 hour)
+1. Balance category distribution (25k each = 100k total)
+2. Add DBA Team, Security Ops, Cloud Ops to resolvers
+3. Improve category→resolver mapping
+4. Retrain on balanced data
+Expected: Category 95%+, Resolver 75%+
+
+PHASE 3: Advanced Features (2 hours)
+1. Add time-based features
+2. Add workload simulation
+3. Add business service → resolver mapping
+4. Implement hybrid rule+ML approach
+Expected: Category 96%+, Resolver 85%+
+
+Choose based on your hackathon timeline!
+"""

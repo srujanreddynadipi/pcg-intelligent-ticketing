@@ -1,0 +1,68 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Documentation (keep only essential)
+DEPLOYMENT.md
+HACKATHON_GUIDE.md
+
+# Local development files
+*.log
+*.sqlite
+*.db
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Models (will be downloaded from HuggingFace)
+models/models--*
+app/models/models--*
+
+# Config files not needed
+.env.local
+.env.development
+render.yaml
+requirements-vercel.txt
+
+# Scripts not needed in production
+start.bat
+start.sh
+nodejs_integration_example.js
